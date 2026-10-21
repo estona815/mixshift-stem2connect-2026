@@ -1,6 +1,6 @@
 # MixShift
 
-A local educational tool for inspecting how a changed aggregate success rate relates to changed group rates and changed group shares. New work began on 2026-10-22 for the STEM2Connect Scientific Research track. This prototype is not a registered or submitted contest entry. No measured learning benefit, adoption or award is claimed.
+An educational tool for inspecting how a changed aggregate success rate relates to changed group rates and changed group shares. New work began on 2026-10-22 for the STEM2Connect Scientific Research track. The solo entrant is registered; this project remains a Devpost draft and has not entered the contest through final submission. No measured learning benefit, adoption or award is claimed.
 
 ## Run and reproduce
 
@@ -14,7 +14,7 @@ The default synthetic example has Returning counts 90/100 before and 19/20 after
 
 ## Method and interpretation
 
-For each group define success rates r0 and r1 and shares w0 and w1 of the period total. Before rate is Σw0r0; after rate is Σw1r1. Within-group contribution is Σ[(w0+w1)/2](r1−r0). Composition contribution is Σ[(r0+r1)/2](w1−w0). Their sum equals the aggregate difference exactly. Equivalently, average the contributions over the two orders of replacing rates and replacing shares. The audit shows each order and each group's contribution.
+For each group define success rates r0 and r1 and shares w0 and w1 of the period total. Before rate is `Σw0r0`; after rate is `Σw1r1`. Within-group contribution is `Σ[(w0+w1)/2](r1−r0)`. Composition contribution is `Σ[(r0+r1)/2](w1−w0)`. Their sum equals the aggregate difference exactly. Equivalently, average the contributions over the two orders of replacing rates and replacing shares. The audit shows each order and each group's contribution.
 
 The engine uses reduced BigInt fractions for rates, weights and contributions; its residual must be exactly zero. JSON exports serialize fractions as strings and include every original label/count and explicit false flags for causal claims, significance tests and uncertainty intervals. A reversal label requires every individual rate to change strictly in the opposite direction from the aggregate; ties do not trigger it.
 
@@ -32,4 +32,4 @@ OpenAI Codex assisted implementation, tests, explanations and design prompting. 
 
 ## Contest status
 
-Local independent code, arithmetic and browser review completed. A stale detailed-audit display found during review was fixed and independently rechecked for edit, error, add, remove and successful recalculation flows. Public source: https://github.com/estona815/mixshift-stem2connect-2026 . Free demo deployment verification, actual demo-video production and hosting, event registration, saved Devpost package review, final legal assent, single-sender coordination and verified contest receipt remain separate steps. A prerecorded Demo Day presentation is an additional event obligation whose delivery instructions are still to be confirmed. This project is not QuorumGlass and contains no reused QuorumGlass source or media.
+Local independent code, arithmetic and browser review completed. A stale detailed-audit display found during review was fixed and independently rechecked for edit, error, add, remove and successful recalculation flows. Public source: https://github.com/estona815/mixshift-stem2connect-2026 . The [working demo](https://estona815.github.io/mixshift-stem2connect-2026/) is deployed; all seven deployed files matched local bytes. The [100-second unlisted video](https://youtu.be/YLPUrFP-imQ) shows actual app captures with captions and synthetic inputs, without narration or music. Independent review checked seven sampled encoded frames and the full decoder run, and the hosted video played successfully in the publisher account; this is not a claim of continuous viewing or signed-out playback verification. Saved Devpost package review, final legal assent, single-sender coordination and verified contest receipt remain separate steps. A prerecorded Demo Day presentation is an additional event obligation whose delivery instructions are still to be confirmed. This project is not QuorumGlass and contains no reused QuorumGlass source or media.
