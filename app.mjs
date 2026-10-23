@@ -1,3 +1,4 @@
+import {mountOcrInput} from './ocr-input.mjs';
 import {EXAMPLE,analyze,audit,numeric,exact,sub} from './engine.mjs';
 const $ = id => document.getElementById(id);
 const fields = ['group','before_success','before_total','after_success','after_total'];
@@ -60,3 +61,5 @@ $('editor').addEventListener('submit',compute); $('example').addEventListener('c
 $('add').addEventListener('click',()=>{if($('group-rows').children.length>=12)return;addRow();invalidate();$('group-rows').lastElementChild.querySelector('input').focus();});
 $('export').addEventListener('click',()=>{if(!result)return;const blob=new Blob([JSON.stringify(audit(result),null,2)+'\n'],{type:'application/json'});const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='mixshift-audit.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);});
 example();
+
+mountOcrInput(rows=>{ $("group-rows").replaceChildren();rows.forEach(addRow);invalidate(); });

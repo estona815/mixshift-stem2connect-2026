@@ -7,3 +7,7 @@
 h1{font-family:"Times New Roman",Times,serif}.audit-details{border:1px solid var(--line);margin-top:8px}.audit-details>summary{padding:12px 20px}
 
 .scroll-hint{display:none}@media(max-width:800px){#editor table{min-width:850px}#editor th:first-child{width:20%}.scroll-hint{display:block;font:13px/1.5 system-ui,sans-serif;color:var(--muted);margin:8px 0 0}}
+
+#ocr-text{display:block;width:100%;box-sizing:border-box;margin:12px 0;padding:12px;font:inherit;min-height:140px}#ocr-preview{white-space:pre-wrap;overflow-wrap:anywhere}#ocr-file{display:block;margin:12px 0;max-width:100%}
+
+#ocr-image{display:block;max-width:100%;max-height:350px;object-fit:contain;margin:16px 0;border:1px solid #ccc}#ocr-image[hidden]{display:none}
